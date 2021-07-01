@@ -1,0 +1,22 @@
+.bookList .list-group-item,
+.authorList .list-group-item {
+    border-radius: 2px;
+    background-color: var(--bs-dark);
+    color: white;
+    margin-bottom: 20px; 
+
+}
+
+.search-result-heading {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 0;
+
+}
+
+.search-result-subheading {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    
+}

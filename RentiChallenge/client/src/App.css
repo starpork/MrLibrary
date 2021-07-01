@@ -1,0 +1,41 @@
+.remove-btn {
+    margin-right: 0.5rem;
+}
+
+.fade-enter {
+    opacity: 0.01;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 1000ms ease-in;
+    
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0.01;
+    transition: opacity 1000ms ease-in;
+    
+}
+
+.App
+{
+    /*background-image: url('./assets/bookimage.jpg');*/
+    background-color: #343a40;
+    height: 100%;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.search-body-block
+{
+    min-height: calc(100vh - 104px);
+    height: calc(100% - 104px);
+}
