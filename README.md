@@ -3,7 +3,7 @@ Library System Search and Borrow books
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+This is a library search system, you can use this system to search the Library database for Authors and Books
 
 ## Getting Started
 
@@ -40,13 +40,6 @@ Alternatively you can run the deployed application from heroku
 
 * Go to https://conservative-goose-61321.herokuapp.com/ (need to have Redux Devtools Extension installed and enabled for this to work https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
 
 ## Authors
 
