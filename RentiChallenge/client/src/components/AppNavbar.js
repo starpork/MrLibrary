@@ -25,7 +25,7 @@ const AppNavbar = ({title}) => {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="justify-content-end" style={{ width: "100%" }} navbar>
                     <NavItem>
-                        <NavLink href ="http://www.github.com" target="_blank">
+                        <NavLink href ="https://github.com/starpork/MrLibrary" target="_blank">
                             Github
                         </NavLink>
                     </NavItem>
