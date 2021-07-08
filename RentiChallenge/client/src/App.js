@@ -5,15 +5,21 @@ import AppNavbar from './components/AppNavbar';
 import BookList from './components/BookList';
 import AuthorList from './components/AuthorList';
 
-import { Provider} from 'react-redux';
-import store from './store';
+
 import ItemModal from './components/ItemModal';
 import { Container } from 'reactstrap';
 import './App.css';
+import { loadUser } from './actions/authActions';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 function App() {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    console.log('LOADING USER')
+    dispatch(loadUser())    
+  }, [])
   return (
-    <Provider store={store}>
       <div className="App">
         <AppNavbar title='my nav bar'/>
         <Container className='search-body-block'>
@@ -25,7 +31,6 @@ function App() {
           <AuthorList/>
         </Container>
       </div>
-    </Provider>
 
   );
 }

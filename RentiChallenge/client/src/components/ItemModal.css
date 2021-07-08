@@ -2,3 +2,11 @@
 {
     width: 100%;
 }
+.register-form label
+{
+    margin-top: 1rem;
+}
+.register-form input
+{
+    margin-top: 5px;
+}

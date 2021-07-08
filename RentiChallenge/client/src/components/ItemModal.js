@@ -21,6 +21,10 @@ import PropTypes from 'prop-types'
 
 const ItemModal = props => {
     const[modalState,setModalState] = useState({modal: false, name: ''});
+
+    const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
+
+
     const dispatch = useDispatch();
     const onChange = (e) => {
         setModalState(prevModalState => ({
@@ -64,12 +68,13 @@ const ItemModal = props => {
         
     }
     
-
+    const authorSearchDisabled = !isAuthenticated && props.collection === 'authors';
     
 
     return (
         <div>
-            <Button className='search-button' color="dark" style={{marginBottom: '2rem'}} onClick={toggle}>
+            {authorSearchDisabled && <h5  className="text-muted">Please Login to search Authors</h5>}
+            <Button disabled={authorSearchDisabled ? true : false } className='search-button' color="dark" style={{marginBottom: '2rem'}} onClick={toggle}>
                 {props.search ? "Search " + props.collection : 'Add item'}
             </Button>
             <Modal

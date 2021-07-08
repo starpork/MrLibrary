@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const auth = require('../../middleware/auth')
+
 //Book Model
 const author = require('../../models/author');
 
@@ -15,8 +17,8 @@ router.get('/', (req, res) => {
 
 // @route GET api/authors
 // @desc Get Search Authors
-// @access Public
-router.get('/:searchterm', (req, res) => {
+// @access Private
+router.get('/:searchterm',auth, (req, res) => {
     author
     //.find({title : {$regex: `/^${req.params.searchterm}$/i` }})    
     .find({$text: {$search: req.params.searchterm }})

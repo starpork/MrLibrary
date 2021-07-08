@@ -1,0 +1,4 @@
+{
+    "mongoURI" : "mongodb+srv://jarrod:jarrod@librarysystem.9wtoc.mongodb.net/librarysystemdb?retryWrites=true&w=majority",
+    "jwtSecret" : "library_jwtSecret"
+}

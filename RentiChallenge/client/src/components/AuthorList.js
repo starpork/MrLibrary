@@ -6,23 +6,25 @@ import { useEffect } from 'react';
 import 'redux-thunk';
 //import { v4 as uuidv4 } from 'uuid'; 
 //import { connect } from 'react-redux';
-import { useSelector, useDispatch } from 'react-redux';
-import {getAuthors} from '../actions/itemActions'
+import { useSelector, useDispatch, useCallback } from 'react-redux';
+import {getAuthors, getAllAuthors} from '../actions/authorActions'
 import './BookList.css'
 var parse = require('html-react-parser');
 
 const AuthorList = props => {
      const dispatch = useDispatch();
 
-    //useEffect(() => {
-        //dispatch(getItems())
-        //dispatch(getItems())
-    //}, []);   
+    /*useEffect(() => {
+        dispatch(getAllAuthors())
+    }, []);  */ 
 
   
     
 
-  const author = useSelector(state => state.author);
+   // const author = useSelector(state => state.author);
+    const author = useSelector(state => state.author);
+
+    
       
     return (
         <Container>            
